@@ -1,18 +1,17 @@
 % Author: Mostafa Rezapour
-% The input of this function is an m by n matrix, and the output are: 1. A
-% matrix whose columns are the pivot columns of the input matrix A 2. A
-% vector whose elements are the pivot columns indices. 
-% W e will use this function for our future projects. For instance, if you
+% The input of this function is an m by n matrix, and the outputs are:
+%1. A matrix whose columns are the pivot columns of the input matrix A 
+%2. A  vector whose elements are the pivot columns indices. 
+% We will use this function for our future projects. For instance, if you
 % are interested to find a basis of the column space of a matrix, this code
-% will give a basis in the matrix format. 
+% will give you a basis in a matrix form. 
 % 
 
 
 
 % My dear students in MST 121-D at Wake Fores- Please watch the tutorial
 % video that I have recoreded and posted on Canvas for you. In the video I
-% start from scratch and go through this code to show you what the reason
-% behind each code line is.
+% start from scratch and go through this code step by step to give you the idea behind each code line.
 
 function detectinv(A)
 Pivot_columns_matrix=[];
