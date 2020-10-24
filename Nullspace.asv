@@ -1,0 +1,35 @@
+% Author: Mostafa Rezapour
+%Homework 8, problem 1: This function finds a basis of the Null Space of an m by n
+%matrix A.
+
+function Nullspace(A)
+[m n]=size(A);
+x=sym('x',[3 1]);
+R=rref(A);
+if m==n
+    if rank(A)==m
+        f=msgbox('The Null space of the matrix is the zero vector and its basis is the empty set','Solution','help')
+        
+    end
+end
+Null_space_Basis=[];
+if m~=n
+    % I use the "detectinv" function that we have already defined and
+    % dissicused in the lecture and is located in the same directory to
+    % find the pivot columns indices. 
+    [Q v]=detectinv(A);
+    for j=1:n % I use v to find the pivot column and non pivot column indices. Then if we multiply the corresponding of rref(A)to the nonpivot column by (-1), the result will be a vector in the nullspace of A. in the row reduced echlon form of the matrix 
+         for q=1:length(v)
+             if v(q)==j
+                 Null_space_basis=[Null_space_basis (-1)*R(:,j);
+                     
+             end
+         end
+    end
+    disp('The columns of the following matrix is a basis for the null space of the matrix')
+    disp(
+end
+    
+
+
+end

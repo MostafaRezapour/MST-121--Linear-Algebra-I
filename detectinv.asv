@@ -13,7 +13,7 @@
 % video that I have recoreded and posted on Canvas for you. In the video I
 % start from scratch and go through this code step by step to give you the idea behind each code line.
 
-function [B, v]=detectinv(A)
+function [B v]=detectinv(A)
 Pivot_columns_matrix=[];
 ind=[];
 [m n]=size(A);
@@ -21,10 +21,10 @@ ind=[];
 % rows or columns then the columns of A are linearly indepent
 if m==n
     if rank(A)==m
-        f=msgbox('The columns of A are linearly independent', 'Help','help');
+        f=msgbox('The columns of A are linearly independent', 'Help','help')
     elseif rank(A)~=m 
           R=rref(A);
-     [m ,n]=size(A);
+     [m n]=size(A);
      for i=1:m
          if sum(abs(R(i,:)))~=0
              r=R(i,:);
@@ -38,8 +38,6 @@ if m==n
      disp(Pivot_columns_matrix)
       disp(' The pivot columns indices are:')
      disp(ind)
-     v=ind;
-      B=Pivot_columns_matrix;
         return
     end
 end
@@ -55,20 +53,18 @@ end
              ind=[ind v(1)];
          end
      end
-    
+     B=Pivot_columns_matrix;
      disp('The columns of the following matrix are the pivot columns of the origonal matrix:')
      disp(Pivot_columns_matrix)
      disp(' The pivot columns indices are:')
      disp(ind)
      v=ind;
-      B=Pivot_columns_matrix;
     
 
  end
              
 
-v=ind;
-      B=Pivot_columns_matrix;
+
 
 %
 end
