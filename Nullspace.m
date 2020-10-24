@@ -1,4 +1,6 @@
 % Author: Mostafa Rezapour
+%You should check whether there is a bug in this code.You should use
+%different tot examples.
 %Homework 8, problem 1: This function finds a basis of the Null Space of an m by n
 %matrix A.
 
